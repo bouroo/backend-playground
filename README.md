@@ -47,24 +47,32 @@
 - **Testing**: Write unit tests for your application and ensure the code is robust.
 - **Deployment**: Deploy your mini-project on a platform like Heroku or AWS, focusing on understanding environment variables and deployment pipelines.
 
-## Mini Project: Simple RESTful API
+## Mini Project: Simple Shopping Cart API
 
 ### Project Description
-Create a simple RESTful API for a "To-Do List" application. The application should allow users to:
-- **Create** a new to-do item.
-- **Read** the list of to-do items.
-- **Update** existing to-do items.
-- **Delete** to-do items.
+Create a simple RESTful API for a "Shopping Cart" application. The application should allow users to:
+- **Add** items to the shopping cart.
+- **View** the list of items in the cart.
+- **Update** quantities of items in the cart.
+- **Remove** items from the cart.
+- **Apply** campaign discounts to the cart.
 
 ### Features to Implement
-- **User Authentication**: Implement basic authentication (e.g., JWT).
-- **CRUD Operations**: Complete CRUD operations for the to-do list.
+- **User Authentication**: Implement basic authentication (e.g., JWT) to secure user data.
+- **CRUD Operations**: Complete CRUD operations for managing the shopping cart.
+- **Campaigns and Discounts**: Implement functionalities to apply discount codes or campaigns to the cart total.
+- **Price Calculation**: Calculate total price and apply discounts accordingly.
 - **Database**: Use a database to store and retrieve data (e.g., SQLite, PostgreSQL).
-- **Testing**: Write tests for each API endpoint.
-- **Deployment**: Deploy the API to a cloud platform.
+- **Testing**: Write tests for each API endpoint to ensure functionality and reliability.
+- **Deployment**: Deploy the API to a cloud platform, ensuring environment variables and secure handling of sensitive data.
 
 ### Tools & Technologies
 - **Language**: Your chosen new programming language.
-- **Framework**: A popular backend framework for that language.
-- **Database**: Use a manageable database suitable for the project scale.
-- **Version Control**: Use Git for version control.
+- **Framework**: A popular backend framework suitable for developing RESTful APIs.
+- **Database**: Choose a database that can efficiently handle cart operations and transaction data.
+- **Version Control**: Use Git for version control to track changes and collaborate with others.
+
+### Additional Considerations
+- **Feature Expansion**: Consider adding features like user profiles, order history, and payment processing for a more robust shopping experience.
+- **Security**: Ensure data protection and secure transactions with encryption and secure token storage.
+- **Performance**: Optimize database queries and API responses for better performance, especially with large datasets and high traffic.
