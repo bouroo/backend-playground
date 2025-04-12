@@ -15,7 +15,7 @@ type TaskRepository interface {
 	CreateTask(task *models.Task) error
 	GetTask(id uuid.UUID) (*models.Task, error)
 	UpdateTask(id uuid.UUID, task *models.Task) error
-	DeleteTask(id uuid.UUID) error
+	RemoveTask(id uuid.UUID) error
 }
 
 func NewTaskRepository(db *sql.DB) TaskRepository {
@@ -89,7 +89,7 @@ func (r *taskRepositoryImpl) UpdateTask(id uuid.UUID, task *models.Task) error {
 	return tx.Commit()
 }
 
-func (r *taskRepositoryImpl) DeleteTask(id uuid.UUID) error {
+func (r *taskRepositoryImpl) RemoveTask(id uuid.UUID) error {
 	tx, err := r.db.Begin()
 	if err != nil {
 		return err
