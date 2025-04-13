@@ -4,6 +4,7 @@ go 1.24.2
 
 require (
 	github.com/google/uuid v1.6.0
+	github.com/guregu/null/v6 v6.0.0
 	modernc.org/sqlite v1.37.0
 )
 
