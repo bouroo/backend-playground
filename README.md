@@ -60,7 +60,7 @@ Create a simple RESTful API for a "Shopping Cart" application. The application s
 ### Features to Implement
 - **User Authentication**: Implement basic authentication (e.g., JWT) to secure user data.
 - **CRUD Operations**: Complete CRUD operations for managing the shopping cart.
-- **Campaigns and Discounts**: Implement functionalities to apply discount codes or campaigns to the cart total.
+- **Campaigns and Discounts**: Implement functionalities to apply discount codes or multiple campaigns types to the cart total.
 - **Price Calculation**: Calculate total price and apply discounts accordingly.
 - **Database**: Use a database to store and retrieve data (e.g., SQLite, PostgreSQL).
 - **Testing**: Write tests for each API endpoint to ensure functionality and reliability.
