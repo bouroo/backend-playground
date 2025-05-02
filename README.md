@@ -1,78 +1,146 @@
-# Learning Plan for New Programming Language
+## Learning Plan for Mastering a New Backend Programming Language
 
-## Week 1: Basics and Syntax
+### Week 1: Language Fundamentals & Environment Setup
 
-### Day 1-2: Get Started
-- **Install Development Environment**: Set up your IDE, and install necessary compilers or interpreters.
-- **Hello World**: Write a simple "Hello World" program to ensure everything is set up correctly.
-- **Basic Syntax**: Learn about variables, data types, and basic input/output.
-- **Resources**: Official language documentation, introductory courses on platforms like Coursera or freeCodeCamp.
+**Objectives:**  
+- Set up development environment  
+- Understand syntax, data types, control structures  
+- Write simple programs and functions  
 
-### Day 3-5: Control Structures
-- **Conditional Statements**: Learn if-else, switch-case.
-- **Loops**: Learn for, while, and do-while loops.
-- **Basic Functions**: Understand function syntax, parameters, and return values.
-- **Practice**: Solve simple problems on platforms like LeetCode or HackerRank to reinforce syntax understanding.
+**Core Concepts:**  
+- Installation & IDE setup  
+- Variables, data types (strings, integers, floats, booleans)  
+- Conditional statements (if/else, switch/case)  
+- Loops (for, while)  
+- Functions and basic I/O operations  
 
-## Week 2: Advanced Concepts
+**Hands-on Exercises:**  
+- Print “Hello, World!” and basic arithmetic operations  
+- Write functions to compute factorial and Fibonacci numbers  
+- Create a simple command-line calculator  
+- Implement basic string manipulations (e.g., palindrome checker)  
 
-### Day 6-7: Data Structures
-- **Arrays and Lists**: Learn how to manipulate lists, arrays, and their operations.
-- **Dictionaries/Maps**: Understand key-value pairs and usage.
-- **Sets**: Learn about set operations and use cases.
+---
 
-### Day 8-10: Object-Oriented Programming (OOP)
-- **Classes and Objects**: Understand class definitions, instantiation, and object usage.
-- **Inheritance and Polymorphism**: Dive into inheritance types and method overloading.
-- **Encapsulation**: Learn about access modifiers and encapsulation principles.
+### Week 2: Data Structures & Error Handling
 
-## Week 3: Practical Application
+**Objectives:**  
+- Learn built-in data structures  
+- Understand exception handling  
+- Introduce modular programming and code organization  
 
-### Day 11-13: Libraries and Frameworks
-- **Standard Libraries**: Familiarize yourself with the most commonly used standard libraries.
-- **Popular Frameworks**: Identify and explore a popular framework related to backend development (e.g., Flask for Python, Express for Node.js).
+**Core Concepts:**  
+- Arrays, lists, dictionaries/maps, sets  
+- Exception handling (try/catch/except)  
+- Functions with parameters and return values  
+- Modules and packages (import/export)  
 
-### Day 14-15: Database Integration
-- **Database Basics**: Learn about SQL and NoSQL databases; practice connecting and performing CRUD operations.
-- **ORMs**: Explore Object-Relational Mapping tools available in the language.
+**Hands-on Exercises:**  
+- Implement a contact list using dictionaries/maps  
+- Write a program to parse and validate user input with error handling  
+- Create a module for basic math utilities (e.g., gcd, lcm)  
+- Practice writing unit tests for functions  
 
-## Week 4: Building and Deploying
+---
 
-### Day 16-18: Mini Project Development
-- **Project Start**: Plan and start building a simple RESTful API.
-    - **Features**: Include user authentication, basic CRUD operations, and simple data validation.
-    - **Tools**: Use a chosen framework and ORM for database interactions.
+### Week 3: Object-Oriented Programming & File I/O
 
-### Day 19-20: Testing and Deployment
-- **Testing**: Write unit tests for your application and ensure the code is robust.
-- **Deployment**: Deploy your mini-project on a platform like Heroku or AWS, focusing on understanding environment variables and deployment pipelines.
+**Objectives:**  
+- Learn classes, objects, and OOP principles  
+- Work with file input/output  
+- Understand simple database or data persistence concepts (optional)  
 
-## Mini Project: Simple Shopping Cart API
+**Core Concepts:**  
+- Classes, objects, constructors, methods  
+- Encapsulation, inheritance, polymorphism basics  
+- Reading from and writing to files (text and JSON)  
+- (Optional) Basics of database connectivity or ORM  
 
-### Project Description
-Create a simple RESTful API for a "Shopping Cart" application. The application should allow users to:
-- **Add** items to the shopping cart.
-- **View** the list of items in the cart.
-- **Update** quantities of items in the cart.
-- **Remove** items from the cart.
-- **Apply** campaign discounts to the cart.
+**Hands-on Exercises:**  
+- Design a class to represent a Product with attributes and methods  
+- Implement reading/writing product data to/from a JSON file  
+- Extend product class with inheritance (e.g., PerishableProduct)  
+- Write a small CLI to load products and display them  
 
-### Features to Implement
-- **User Authentication**: Implement basic authentication (e.g., JWT) to secure user data.
-- **CRUD Operations**: Complete CRUD operations for managing the shopping cart.
-- **Campaigns and Discounts**: Implement functionalities to apply discount codes or multiple campaigns types to the cart total.
-- **Price Calculation**: Calculate total price and apply discounts accordingly.
-- **Database**: Use a database to store and retrieve data (e.g., SQLite, PostgreSQL).
-- **Testing**: Write tests for each API endpoint to ensure functionality and reliability.
-- **Deployment**: Deploy the API to a cloud platform, ensuring environment variables and secure handling of sensitive data.
+---
 
-### Tools & Technologies
-- **Language**: Your chosen new programming language.
-- **Framework**: A popular backend framework suitable for developing RESTful APIs.
-- **Database**: Choose a database that can efficiently handle cart operations and transaction data.
-- **Version Control**: Use Git for version control to track changes and collaborate with others.
+### Week 4: Web Backend Basics & Final Mini-Project Preparation
 
-### Additional Considerations
-- **Feature Expansion**: Consider adding features like user profiles, order history, and payment processing for a more robust shopping experience.
-- **Security**: Ensure data protection and secure transactions with encryption and secure token storage.
-- **Performance**: Optimize database queries and API responses for better performance, especially with large datasets and high traffic.
+**Objectives:**  
+- Understand basic web backend concepts (APIs, routing)  
+- Learn to structure a simple backend app  
+- Design and start the final mini-project  
+
+**Core Concepts:**  
+- HTTP basics, REST principles  
+- Simple routing and request handling  
+- JSON serialization/deserialization  
+- Structuring code for scalability and maintainability  
+
+**Hands-on Exercises:**  
+- Create a simple REST API endpoint that returns product data  
+- Implement POST/GET requests with basic validation  
+- Use a lightweight web framework or standard library HTTP server  
+- Plan the final mini-project architecture and data structures  
+
+---
+
+## Final Mini-Project: Shopping Cart with Multiple Discount Types
+
+### Project Overview:  
+Build a backend module/application that simulates a shopping cart system supporting multiple types of discounts. The system should expose REST API endpoints to add/remove products, apply discounts, and calculate the final price.
+
+---
+
+### Functional Specifications:
+
+1. **Products:**  
+   - Each product has an ID, name, price, and category.
+
+2. **Shopping Cart:**  
+   - Supports adding products with quantities.  
+   - Supports removing products or adjusting quantities.
+
+3. **Discount Types:**  
+   - **Percentage Discount:** Applies a percentage off on the total cart price.  
+   - **Fixed Amount Discount:** Deducts a fixed amount from the total price.  
+   - **Buy X Get Y Free:** For a given product, buy X units and get Y units free.  
+   - **Category Discount:** Applies a percentage discount only to products in a specified category.
+
+4. **Discount Application Rules:**  
+   - Multiple discounts can be applied but must not reduce the total below zero.  
+   - Discounts are applied in this order: item-level (Buy X Get Y), category-level, then cart-level (percentage and fixed amount).  
+   - The system should handle invalid discount inputs gracefully.
+
+5. **API Endpoints:**  
+   - `POST /cart/add` — Add product with quantity  
+   - `POST /cart/remove` — Remove product or decrease quantity  
+   - `POST /cart/discount` — Apply a discount (type and parameters)  
+   - `GET /cart/total` — Return current total and itemized breakdown  
+
+6. **Response Format:**  
+   - JSON with details of cart items, discounts applied, and final total.
+
+---
+
+### Technical Requirements:
+
+- Use the new programming language and appropriate web backend libraries or frameworks.  
+- Code should be modular, with classes or modules for Product, Cart, Discount, etc.  
+- Validate all inputs and return meaningful error messages.  
+- Include unit tests covering core logic (discount calculations, cart operations).  
+- Document code and API endpoints clearly (e.g., README with usage instructions).  
+- (Optional) Persist cart state in-memory or use a lightweight database/file.
+
+---
+
+### Validation Criteria:
+
+- Correct implementation of all discount types and application rules  
+- Clean, readable, and maintainable code structure  
+- Proper error handling and input validation  
+- Functional API endpoints with expected request and response formats  
+- Passing unit tests demonstrating core functionality  
+- Ability to extend or modify discounts without major refactoring  
+
+---
