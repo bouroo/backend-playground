@@ -69,7 +69,7 @@
 **Objectives:**  
 - Understand basic web backend concepts (APIs, routing)  
 - Learn to structure a simple backend app  
-- Design and start the final mini-project  
+- Design and start the final mini-project: Simple forum post with authentication
 
 **Core Concepts:**  
 - HTTP basics, REST principles  
@@ -81,66 +81,64 @@
 - Create a simple REST API endpoint that returns product data  
 - Implement POST/GET requests with basic validation  
 - Use a lightweight web framework or standard library HTTP server  
-- Plan the final mini-project architecture and data structures  
+- Plan the final mini-project architecture and data structures for a forum post with authentication.
 
 ---
 
-## Final Mini-Project: Shopping Cart with Multiple Discount Types
+## Final Mini-Project: Simple forum post with authentication
 
-### Project Overview:  
-Build a backend module/application that simulates a shopping cart system supporting multiple types of discounts. The system should expose REST API endpoints to add/remove products, apply discounts, and calculate the final price.
+### Project Overview:
+Build a backend application that simulates a simple forum where users can create posts. The system should include user authentication (registration, login) and allow authenticated users to create new forum posts.
 
 ---
 
 ### Functional Specifications:
 
-1. **Products:**  
-   - Each product has an ID, name, price, and category.
+1.  **User Authentication:**
+    *   **Registration:** Users can register with a unique username and a password.
+    *   **Login:** Registered users can log in using their credentials to obtain an authentication token (e.g., JWT).
+    *   **Authentication:** All post creation endpoints should require a valid authentication token.
 
-2. **Shopping Cart:**  
-   - Supports adding products with quantities.  
-   - Supports removing products or adjusting quantities.
+2.  **Forum Posts:**
+    *   Each post has an ID, a title, content, the ID of the author, and a creation timestamp.
+    *   Authenticated users can create new posts.
 
-3. **Discount Types:**  
-   - **Percentage Discount:** Applies a percentage off on the total cart price.  
-   - **Fixed Amount Discount:** Deducts a fixed amount from the total price.  
-   - **Buy X Get Y Free:** For a given product, buy X units and get Y units free.  
-   - **Category Discount:** Applies a percentage discount only to products in a specified category.
+3.  **API Endpoints:**
+    *   `POST /auth/register` — Register a new user.
+    *   `POST /auth/login` — Log in a user and return an authentication token.
+    *   `POST /posts` — Create a new forum post (requires authentication).
+    *   `GET /posts` — Retrieve a list of all forum posts.
+    *   `GET /posts/{id}` — Retrieve a single forum post by ID.
 
-4. **Discount Application Rules:**  
-   - Multiple discounts can be applied but must not reduce the total below zero.  
-   - Discounts are applied in this order: item-level (Buy X Get Y), category-level, then cart-level (percentage and fixed amount).  
-   - The system should handle invalid discount inputs gracefully.
-
-5. **API Endpoints:**  
-   - `POST /cart/add` — Add product with quantity  
-   - `POST /cart/remove` — Remove product or decrease quantity  
-   - `POST /cart/discount` — Apply a discount (type and parameters)  
-   - `GET /cart/total` — Return current total and itemized breakdown  
-
-6. **Response Format:**  
-   - JSON with details of cart items, discounts applied, and final total.
+4.  **Response Format:**
+    *   JSON with appropriate data structures for users, authentication tokens, and posts.
+    *   Meaningful error messages for failed operations (e.g., duplicate username, invalid credentials, unauthorized access).
 
 ---
 
 ### Technical Requirements:
 
-- Use the new programming language and appropriate web backend libraries or frameworks.  
-- Code should be modular, with classes or modules for Product, Cart, Discount, etc.  
-- Validate all inputs and return meaningful error messages.  
-- Include unit tests covering core logic (discount calculations, cart operations).  
-- Document code and API endpoints clearly (e.g., README with usage instructions).  
-- (Optional) Persist cart state in-memory or use a lightweight database/file.
+*   Use the new programming language and an appropriate web backend framework (e.g., Express.js, Flask, Spring Boot, Gin, Laravel, Ruby on Rails).
+*   Implement secure password hashing (e.g., bcrypt) for storing user passwords.
+*   Use JWT (JSON Web Tokens) or a similar token-based mechanism for authentication.
+*   Code should be modular, with clear separation of concerns (e.g., routes, controllers, services, models).
+*   Validate all inputs (e.g., username uniqueness, password strength, post content).
+*   Include unit and integration tests covering user authentication and post creation.
+*   Document code and API endpoints clearly (e.g., README with usage instructions and example API calls).
+*   Persist user and post data using a lightweight database (e.g., SQLite, PostgreSQL, MongoDB) or in-memory storage for simplicity if database setup is too complex.
 
 ---
 
 ### Validation Criteria:
 
-- Correct implementation of all discount types and application rules  
-- Clean, readable, and maintainable code structure  
-- Proper error handling and input validation  
-- Functional API endpoints with expected request and response formats  
-- Passing unit tests demonstrating core functionality  
-- Ability to extend or modify discounts without major refactoring  
+*   Successful user registration and login with token generation.
+*   Secure storage of user passwords.
+*   Authenticated users can successfully create forum posts.
+*   Unauthenticated attempts to create posts are rejected with appropriate errors.
+*   Ability to retrieve lists of posts and individual posts.
+*   Clean, readable, and maintainable code structure adhering to best practices.
+*   Proper error handling and input validation across all endpoints.
+*   Passing unit and integration tests demonstrating core functionality.
+*   Clear documentation for setup and API usage.
 
 ---
